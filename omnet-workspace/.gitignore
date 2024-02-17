@@ -1,3 +1,5 @@
 /.metadata/
 *.elog
 *.vec
+*.vci
+*.sca

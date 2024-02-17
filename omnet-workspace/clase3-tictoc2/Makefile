@@ -45,13 +45,15 @@ OBJS = \
     $O/txc15.o \
     $O/txc16.o \
     $O/txc17.o \
+    $O/txc18.o \
     $O/txc8.o \
     $O/txc9.o \
     $O/tictoc13_m.o \
     $O/tictoc14_m.o \
     $O/tictoc15_m.o \
     $O/tictoc16_m.o \
-    $O/tictoc17_m.o
+    $O/tictoc17_m.o \
+    $O/tictoc18_m.o
 
 # Message files
 MSGFILES = \
@@ -59,7 +61,8 @@ MSGFILES = \
     tictoc14.msg \
     tictoc15.msg \
     tictoc16.msg \
-    tictoc17.msg
+    tictoc17.msg \
+    tictoc18.msg
 
 # SM files
 SMFILES =
