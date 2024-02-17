@@ -1,5 +1,5 @@
 #
-# OMNeT++/OMNEST Makefile for clase2-tictoc1
+# OMNeT++/OMNEST Makefile for clase3-tictoc2
 #
 # This file was generated with the command:
 #  opp_makemake -f --deep -O out -I.
@@ -7,7 +7,7 @@
 
 # Name of target to be created (-o option)
 TARGET_DIR = .
-TARGET_NAME = clase2-tictoc1$(D)
+TARGET_NAME = clase3-tictoc2$(D)
 TARGET = $(TARGET_NAME)$(EXE_SUFFIX)
 TARGET_IMPLIB = $(TARGET_NAME)$(IMPLIB_SUFFIX)
 TARGET_IMPDEF = $(TARGET_NAME)$(IMPDEF_SUFFIX)
@@ -33,10 +33,25 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc, .msg and .sm files
-OBJS = $O/txc1.o $O/txc2.o $O/txc3.o
+OBJS = \
+    $O/txc10.o \
+    $O/txc10a.o \
+    $O/txc11.o \
+    $O/txc12.o \
+    $O/txc13.o \
+    $O/txc14.o \
+    $O/txc15.o \
+    $O/txc8.o \
+    $O/txc9.o \
+    $O/tictoc13_m.o \
+    $O/tictoc14_m.o \
+    $O/tictoc15_m.o
 
 # Message files
-MSGFILES =
+MSGFILES = \
+    tictoc13.msg \
+    tictoc14.msg \
+    tictoc15.msg
 
 # SM files
 SMFILES =
