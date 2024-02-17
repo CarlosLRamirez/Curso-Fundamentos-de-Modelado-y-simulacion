@@ -1,0 +1,85 @@
+version 3
+run Practica1a-0-20240217-11:56:30-90240
+attr configname Practica1a
+attr datetime 20240217-11:56:30
+attr datetimef 20240217-115630
+attr experiment Practica1a
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Practica1a
+attr processid 90240
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config record-eventlog true
+config sim-time-limit 3600s
+config network Practica1a
+config Practica1a.nodo[0].tiempoRetardo exponential(1s)
+config Practica1a.nodo[1].tiempoRetardo exponential(1s)
+config Practica1a.nodo[2].tiempoRetardo exponential(1s)
+config Practica1a.nodo[3].tiempoRetardo exponential(1s)
+config Practica1a.nodo[0].timeout 60s
+config Practica1a.nodo[1].timeout 60s
+config Practica1a.nodo[2].timeout 60s
+config Practica1a.nodo[3].timeout 60s
+config Practica1a.nodo[0].tazaPerdida 10
+config Practica1a.nodo[1].tazaPerdida 10
+config Practica1a.nodo[2].tazaPerdida 10
+config Practica1a.nodo[3].tazaPerdida 10
+config seed-0-mt 536570
+
+par Practica1a.nodo[0].salida[0].channel typename "\"Practica1a.Canal\""
+par Practica1a.nodo[0].salida[0].channel disabled false
+attr mutable ""
+par Practica1a.nodo[0].salida[0].channel delay 2s
+attr mutable ""
+attr unit s
+par Practica1a.nodo[1].salida[0].channel typename "\"Practica1a.Canal\""
+par Practica1a.nodo[1].salida[0].channel disabled false
+attr mutable ""
+par Practica1a.nodo[1].salida[0].channel delay 2s
+attr mutable ""
+attr unit s
+par Practica1a.nodo[2].salida[0].channel typename "\"Practica1a.Canal\""
+par Practica1a.nodo[2].salida[0].channel disabled false
+attr mutable ""
+par Practica1a.nodo[2].salida[0].channel delay 2s
+attr mutable ""
+attr unit s
+par Practica1a.nodo[3].salida[0].channel typename "\"Practica1a.Canal\""
+par Practica1a.nodo[3].salida[0].channel disabled false
+attr mutable ""
+par Practica1a.nodo[3].salida[0].channel delay 2s
+attr mutable ""
+attr unit s
+par Practica1a.nodo[0] typename "\"Nodo2\""
+par Practica1a.nodo[0] tiempoRetardo exponential(1s)
+attr unit s
+par Practica1a.nodo[0] tazaPerdida 10
+par Practica1a.nodo[0] timeout 60s
+attr unit s
+par Practica1a.nodo[1] typename "\"Nodo2\""
+par Practica1a.nodo[1] tiempoRetardo exponential(1s)
+attr unit s
+par Practica1a.nodo[1] tazaPerdida 10
+par Practica1a.nodo[1] timeout 60s
+attr unit s
+par Practica1a.nodo[2] typename "\"Nodo2\""
+par Practica1a.nodo[2] tiempoRetardo exponential(1s)
+attr unit s
+par Practica1a.nodo[2] tazaPerdida 10
+par Practica1a.nodo[2] timeout 60s
+attr unit s
+par Practica1a.nodo[3] typename "\"Nodo2\""
+par Practica1a.nodo[3] tiempoRetardo exponential(1s)
+attr unit s
+par Practica1a.nodo[3] tazaPerdida 10
+par Practica1a.nodo[3] timeout 60s
+attr unit s
+par Practica1a typename "\"Practica1a\""
+
