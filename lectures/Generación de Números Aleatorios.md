@@ -224,7 +224,7 @@ En el caso de la distribución exponencial
 
 $$X_i=\frac{-1}{\lambda}\ln{(1-R_i)}$$
 
-para $i=1,2,3...$ donde $R_i$ es un numero aleatorio uniformemente distribuido entre $(0,1)
+para $i=1,2,3...$ donde $R_i$ es un numero aleatorio uniformemente distribuido entre $(0,1)$.
 
 En la práctica, dado que tanto $R_i$ como $1-R_i$, son números aleatorios uniformemente distribuidos, el calculo puede simplificarse según:
 
@@ -234,11 +234,17 @@ Una vez tenemos este procedimiento establecido, podemos proceder a resolver otra
 
 ### Generación de una Distribución Uniforme
 
-Si X es una variable aleatoria uniformemente distribuida entre el intervalo $[a,b]$, la función para generar $X$ esta dada por $X = a + (b-a)R$.Veamos el paso a paso:
+Si $X$ es una variable aleatoria uniformemente distribuida entre el intervalo $[a,b]$, la función para generar $X$ esta dada por $X = a + (b-a)R$. Veamos el paso a paso:
 
 La función de densidad de probabilidad de X esta dada por:
 
-$$f(x)= \begin{cases}\frac{1}{b-a} & a \leq x \leq b \\ 0 & \text { de lo contrario }\end{cases}$$
+
+$$f_(x)=\begin{cases}
+\frac{1}{b-a} & a \leq x \leq b \\
+0 & \text { de lo contrario }
+\end{cases}$$
+
+
 
 **Paso 1**: La función de densidad acumulada es:
 
