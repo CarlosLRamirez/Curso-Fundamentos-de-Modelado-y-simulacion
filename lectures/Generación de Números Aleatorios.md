@@ -15,7 +15,7 @@ Una secuencia de números aleatorios $R_{1},R_{2},...$, debe tener dos propiedad
 
 Cada numero aleatorio $R_{1}$ es una muestra independiente extraída de una distribución uniforme continua entre cero y uno.
 
-Función de Distribución de Probabilidad
+Función de Densidad de Probabilidad
 
 $$f(x)=\begin{cases}
 0, & 0 \leq x \leq 1  \\
@@ -103,13 +103,14 @@ $$R_{3}=\frac{52}{100}=0.52$$
 #### Aspectos a Considerar
 
 - Los números ($R{1},R{2},...$) generados en el ejemplo unicamente pueden asumir valores del conjunto $I={0,1/m,2/m,...,(m-1)/m}$. 
-- Es decir cada $R{i}$ es discreto en $I$, en lugar de ser continuo en el intervalo $[0,1]$.
-- Si $m$ esto no es mayor problema. Valores de $m=2^{31}-1$ y $m=2^{48}$ son utilizados comúnmente.
+- Es decir cada $R{i}$ **es discreto** en $I$, en lugar de ser continuo en el intervalo $[0,1]$.
+- Si $m$ es muy grande, esto no es mayor problema. Valores de $m=2^{31}-1$ y $m=2^{48}$ son utilizados comúnmente.
 - La *densidad máxima* es una medida de que tan "densamente" los valores asumidos por $R{i},i=1,2...$ llenan los espacios entre $[0,1]$. El *período máximo* es la longitud de la secuencia antes de que los números comiencen a repetirse.
-- Para lograr una *densidad máxima* para un rango determinado, una elección apropiada de $a$, $c$, $m$ y $X_{0}$ es muy importante. El *período máximo* puede ser alcanzado mediante alguna selección comprobada de estos valores.
-  - Para $m$ una potencia de 2, i.e. $m=2^{b}$, y $c\neq0$, el período más largo posible es $P=m=2^{b}$, cuando $c$ es un primo relativo a $m$ y $a=1+4k$, donde $k$ es un entero. 
-  - Para $m$ una potencia de 2, i.e. $m=2^{b}$, y $c=0$, el período más largo posible es $P=m/4=2^{b-2}$, el cual es alcanzado si la semilla $X_{0}$ es impar y si el multiplicador $a$ esta dado por $a=3+8k$ o $a=5+8k$, donde $k$ es un entero.
-  - Para $m$ un número primo y $c=0$, el mayor periodo posible es $P=m-1$ donde $a$ satisface la propiedad que el menor valor de $k$ para el cual $a^{k}-1$ es divisible por $m$ es $k=m-1$.
+
+- Para lograr una *densidad máxima* para un rango determinado, una elección apropiada de $a$, $c$, $m$ y $X_{0}$ es muy importante. El *período máximo* puede ser alcanzado mediante algunas **selecciones comprobadas** de estos valores:
+  - Cuando $m$ es una potencia de 2, (i.e. $m=2^{b}$), y $c\neq0$, el período máximo es $P=m=2^{b}$, y se alcanza cuando $c$ es un primo relativo a $m$ y $a=1+4k$, donde $k$ es un entero (i.e. 5,9,13...). 
+  - Cuando $m$ es una potencia de 2, (i.e. $m=2^{b}$), y $c=0$, el período máximo posible es $P=m/4=2^{b-2}$, el cual es alcanzado si la semilla $X_{0}$ es impar y si el multiplicador $a$ esta dado por $a=3+8k$ o $a=5+8k$, donde $k$ es un entero (i.e. 11,21, 29).
+  - Si $m$ es un número primo y $c=0$, el mayor periodo posible es $P=m-1$ cuando $a$ satisface la propiedad que el menor valor de $k$ tal que $a^{k}-1$ es divisible por $m$ es $k=m-1$. Esto significa que $a$ debe ser una [raíz primitiva](https://es.wikipedia.org/wiki/Ra%C3%ADz_primitiva_m%C3%B3dulo_n) módulo $m$, lo cual es una condición para alcanzar el período máximo cuando m ex primo y c=0;
 
 
 #### Ejercicio 1
@@ -122,42 +123,42 @@ $$R_{3}=\frac{52}{100}=0.52$$
 
 #### Ejercicio 2
 
-Repita el ejercicio anterior para el generador congruencial multiplicativo con $a=13$, $m=2^6=64$ y $X_0=1,2,3,4$
+- Repita el ejercicio anterior para el generador congruencial multiplicativo con $a=13$, $m=2^6=64$ y $X_0=1,2,3 y 4$, respondiendo a las mismas preguntas.
+- Investigue valores comúnmente utilizados para generadores congruencial lineales, repita el ejercicio para estos valores investigado, respondiendo a las mismas preguntas.
 
 #### Ejercicio 3
 
-Investigue valores comúnmente utilizados para generadores congruencial lineales, repita el ejercicio para estos valores investigados.
-
-#### Ejercicio 4
-
 Utilice el siguiente generador congruencial lineal de números aleatorios:
 
-$d_i=16807d_{i-1}mod(2^31 - 1)$
+$$d_i=16807d_{i-1}mod(2^{31} - 1)$$
 
 - Cuántos bits son necesarios para la multiplicación mas larga posible?
 - Cuales son las implicaciones de este generador en una computadora con aritmética de 32 bits?
 
 ## Generadores congruentes lineales combinados
 
-Combinando dos o más generadores congruentes multiplicativos se puede aumentar la longitud del período y se obtienen otras estadísticas mejores. Véase el Ejemplo 8.5 en la página 297.
+Combinando dos o más generadores congruentes multiplicativos se puede aumentar la longitud del período y se obtienen otras estadísticas mejores. Véase el Ejemplo en Banks,J., Carson,J., Nelson,B.& Nicol,D. (2020). Discrete-Event System Simulation (5ta ed.). Pearson. p. 282.
 
 ## Generación de Variables Aleatorias
 
 Ahora que hemos aprendido a generar una variable aleatoria uniformemente distribuida, estudiaremos cómo producir variables aleatorias de otra distribución utilizando la variable aleatoria uniformemente distribuida.
 
-Las técnicas analizadas incluyen la transformación inversa y la convolución. También se discute la técnica de aceptación-rechazo.
-
-Todo el trabajo aquí supone la existencia de una fuente de números aleatorios uniformes (0,1), $R_1, R_2, ...$.
+Se asume que se tiene una fuente de números aleatorios uniformes entre $(0,1)$, $R_1, R_2, ...$, en donde se tienen las siguientes funciones:
 
 Función de Densidad de Probabilidad
 
-
-$$f_R(x)= \begin{cases}1, & 0 \leqslant x \leqslant 1 \\ 0, & \text { de lo contrario }\end{cases}$$
-
+$$f_R(x)=\begin{cases}
+0, & 0 \leq x \leq 1  \\
+1, & \text{ de lo contrario } 
+\end{cases}$$
 
 Función de Probabilidad Acumulada
 
-$$F_R(x) \begin{cases}0, & x<0 \\ x, & 0 \leqslant x \leqslant 1 \\ 1, & x>1\end{cases}$$
+$$f_R(x)=\begin{cases}
+0, & x < 0  \\
+x, & 0 \leq x \leq 1  \\ 
+1, & x > 0 
+\end{cases}$$
 
 ### Técnica de la transformación inversa
 
