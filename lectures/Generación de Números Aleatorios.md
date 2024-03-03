@@ -74,9 +74,9 @@ $$X_{i+1}=\left(a X_i+c\right) \bmod m,\quad i=0,1,2, \ldots$$
 - $c$ es el incremento.
 - $m$ es el módulo.
 
-La selección de $a$, $c$, $m$ y $X_{0}$ afecta drásticamente las propiedades estadísticas como al media y la varianza, así como la longitud de ciclo.
+La selección de $a$, $c$, $m$ y $X_{0}$ afecta drásticamente las propiedades estadísticas como la media y la varianza, así como la longitud de ciclo.
 
-Cuando $c\neq0$, entonces se le llama *método congruencial mixto*, cuando $=0$, se conoce como *método congruencial multiplicativo*
+Cuando $c\neq0$, entonces se le llama *generador congruencial mixto*, cuando $=0$, se conoce como *generador congruencial multiplicativo*
 
 Para la generación de números aleatorios (no enteros) entre $0$ y $1$ podemos utilizar la siguiente ecuación:
 
@@ -87,11 +87,17 @@ $$R_{i}=\frac{X_{i}}{m}\quad,i=1,2,...$$
 Utilice el método congruencial lineal para generar una secuencia de números aleatorios con $X_{0}=27$ , $a=17$ , $c=43$ y $m=100$.
 
 $$X_{0}=27$$
+
 $$X_{1}=(17\cdot27+43)\bmod100=502\bmod100=2$$
+
 $$R_{1}=\frac{2}{100}=0.02$$
+
 $$X_{2}=(17\cdot2+43)\bmod100=77\bmod100=77$$
+
 $$R_{2}=\frac{77}{100}=0.77$$
+
 $$X_{3}=(17\cdot77+43)\bmod100=1352\bmod100=52$$
+
 $$R_{3}=\frac{52}{100}=0.52$$
 
 #### Aspectos a Considerar
