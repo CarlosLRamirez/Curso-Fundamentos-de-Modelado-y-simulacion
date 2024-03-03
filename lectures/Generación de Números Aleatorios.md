@@ -17,7 +17,7 @@ Cada numero aleatorio $R_{1}$ es una muestra independiente extraída de una dist
 
 Función de Distribución de Probabilidad
 
-$$f(x)= \begin{cases}1, & 0 \leqslant x \leqslant 1 \\ 0, & \text { de lo contrario }\end{cases}$$
+$$f(x) = \left\{ \begin{array}{cl} 1 & , \ 0 \leq x \leq 1 \\ 0 & , \ \text{de lo contrario} \end{array} \right.$$
 
 Valor esperado
 
