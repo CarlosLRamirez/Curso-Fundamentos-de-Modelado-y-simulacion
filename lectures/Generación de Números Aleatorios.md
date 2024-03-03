@@ -173,11 +173,18 @@ Recordemos la distribución exponencial
 
 - Función de densidad de probabilidad:
 
-$$f(x)= \begin{cases}\lambda e^{-\lambda x} & , x \geqslant 0 \\ 0 &,   x<0\end{cases}$$
+$$f_(x)=\begin{cases}
+\lambda e^{-\lambda x}, & x \geq 0  \\
+0, & x < 0  \\ 
+\end{cases}$$
+
 
 - Función de probabilidad acumulada
 
-$$F(x)=\int_{-\infty}^x f(t) d t=\begin{cases}1- e^{-\lambda x} & , x \geqslant 0 \\ 0 &,   x<0\end{cases}$$
+$$F(x)=\int_{-\infty}^x f(t) d t=\begin{cases}
+1-e^{-\lambda x}, & x \geq 0  \\
+0, & x < 0  \\ 
+\end{cases}$$
 
 Este método puede ser utilizado para cual distribución en teoría. Pero es particularmente util para variables aleatorias cuyo función inversa puede ser resuelta con facilidad.
 
