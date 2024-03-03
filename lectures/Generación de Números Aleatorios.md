@@ -246,8 +246,8 @@ $$f_(x)=\begin{cases}
 
 **Paso 1**: La función de densidad acumulada es:
 
-$$F(x)= \begin{cases}
-0 & x<a \\
+$$F(x)=\begin{cases}
+0 & x < a \\
 \frac{x-a}{b-a} & a \leq x \leq b \\
 1 & x>b
 \end{cases}$$ 
