@@ -205,12 +205,20 @@ Los pasos son los siguientes:
 - Resolver la ecuación $F(X) = R$ para $X$ en términos de $R$.
 - Para la distribución exponencial, la solución es la siguiente:
   
-  $$\begin{aligned} 
-  1-e^{-\lambda X} & =R \\ 
-  e^{-\lambda X} & =1-R \\
-  -\lambda X & =\ln (1-R) \\
-  X & =-\frac{1}{\lambda} \ln (1-R)
-  \end{aligned}$$
+$$\begin{aligned} 
+1-e^{-\lambda X} & =R \\ 
+e^{-\lambda X} & =1-R \\
+-\lambda X & =\ln (1-R) \\
+X & =-\frac{1}{\lambda} \ln (1-R)
+\end{aligned}$$
+
+  
+$$\begin{align} 
+1-e^{-\lambda X} & =R \\ 
+e^{-\lambda X} & =1-R \\
+-\lambda X & =\ln (1-R) \\
+X & =-\frac{1}{\lambda} \ln (1-R)
+\end{align}$$
 
   A la ultima ecuación se le llama generador de la variable aleatoria para la distribución exponencial. En general se escribe como $X=F^{-1}(R)$.
 
