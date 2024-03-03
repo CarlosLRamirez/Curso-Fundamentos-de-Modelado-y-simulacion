@@ -19,6 +19,11 @@ Función de Distribución de Probabilidad
 
 $$f(x) = \left\{ \begin{array}{cl} 1 & , \ 0 \leq x \leq 1 \\ 0 & , \ \text{de lo contrario} \end{array} \right.$$
 
+$$f(x)=\begin{cases}
+0 & \text{ x=1 } \\
+1 & \text{ de lo contrario } 
+\end{cases}$$
+
 Valor esperado
 
 $$E(R)=\int_0^1 x d x=\left.\frac{x^2}{2}\right|_0 ^1=\frac{1}{2}$$
