@@ -205,14 +205,6 @@ Los pasos son los siguientes:
 - Resolver la ecuación $F(X) = R$ para $X$ en términos de $R$.
 - Para la distribución exponencial, la solución es la siguiente:
   
-$$\begin{aligned} 
-1-e^{-\lambda X} & =R \\ 
-e^{-\lambda X} & =1-R \\
--\lambda X & =\ln (1-R) \\
-X & =-\frac{1}{\lambda} \ln (1-R)
-\end{aligned}$$
-
-  
 $$\begin{align} 
 1-e^{-\lambda X} & =R \\ 
 e^{-\lambda X} & =1-R \\
