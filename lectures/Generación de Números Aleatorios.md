@@ -33,40 +33,39 @@ $$V(R)=\int_0^1 x^2 d x-[E(R)]^2=\left.\frac{x^3}{3}\right|_0 ^1-\left(\frac{1}{
 Algunas consecuencias de las propiedades de uniformidad e independencia:
 
 1. Si el intervalo $(0,1)$ es dividido en $n$ sub-intervalos de igual longitud, el numero esperado de observaciones de cada intervalo es $N/n$ donde $N$ es el número total de observaciones. Nótese que $N$ tiene que ser lo suficientemente largo para mostrar esta tendencia.
-2. La probabilidad de observar un valor en un intervalo particular es independiente del valor previo dibujados.
+2. La probabilidad de observar un valor en un intervalo particular es independiente de los valores anteriormente extraídos.
 
 ### Generación de Números Pseudo-aleatorios
 
-El mero acto de utilizar un *método conocido* para generar números aleatorios remueve el potencial de una aleatoriedad verdadera.
+El mero acto de utilizar un *método conocido* para generar números aleatorios remueve el potencial de una aleatoriedad verdadera. Si el método es conocido, el conjunto de números aleatorios puede ser repetido, por lo que se puede decir que los números no son verdaderamente aleatorios.
 
-Si el método es conocido, el conjunto de números aleatorios puede ser repetido, por lo que se puede decir que los números no son verdaderamente aleatorios.
+Generar números [verdaderamente aleatorios](https://www.bbc.com/mundo/noticias-45515927) requiere acceso a un proceso físico aleatorio, lo que puede ser poco practico para muchos usos computacionales.  Los algoritmos para generar números pseudo-aleatorios, por otro lado, pueden producir números a una velocidad mucho mayor.
 
-Generar números verdaderamente aleatorios requiere acceso a un proceso físico aleatorio, lo que puede ser poco practico para muchos usos computacionales.  Los algoritmos para generar números pseudo-aleatorios, por otro lado, pueden producir números a una velocidad mucho mayor.
+El objetivo de cualquier esquema de generación es, sin embargo, producir una secuencia de números entre 0 y 1 que simule o imite las propiedades ideales de **distribución uniforme** e **independencia** lo más cercano posible.
 
-El objetivo de cualquier esquema de generación es, sin embargo, producir una secuencia de números entre 0 y 1 que simule o imite las propiedades ideales de distribución uniforme e independencia lo más cercano posible.
+En una simulación por computadora, a menudo nos interesa tener números pseudo-aleatorios, porque nos permiten tener el control de los números aleatorios para poder **repetir** el experimento. En general, se utiliza una forma sistemática de generar números pseudo-aleatorios, estos números son completamente predecibles si se conoce el algoritmo y el valor inicial (semilla).
 
-En una simulación por computadora, a menudo nos interesa tener números pseudo-aleatorios, porque nos permiten tener el control de los números aleatorios para poder **repetir** el experimento.
-
-En general, se utiliza una forma sistemática de generar números pseudo-aleatorios, estos números son completamente predecibles si se conoce el algoritmo y el valor inicial (semilla).
-
-Primero generamos números aleatorios uniformemente distribuidos, luego los utilizamos para generar números aleatorios en otra distribución.
+> [!NOTE]
+> Primero generamos números aleatorios uniformemente distribuidos, luego los utilizamos para generar números aleatorios en otra distribución.
 
 Los métodos utilizados por una computadora para generar números pseudo-aleatorios, deben tener en cuenta las siguientes consideraciones:
 
 - El método debe ser rápido.
 - El método debe ser portable a través de plataformas de hardware y lenguajes de programación.
-- El método debe tener un ciclo suficientemente largo.
+- El método debe tener un ciclo suficientemente largo:
+  
   - La longitud de un ciclo representa la longitud de la secuencia de números aleatorios antes de que los números anteriores empiecen a repetirse en un orden anterior. Por ejemplo $4,9,5,6,9,3,8, 4,9,5,6,9,3,8, 4,9,5,6,9,3,8,...$ parece tener una longitud de ciclo de 7 (esto es sólo un ejemplo de ciclo, ¡un número aleatorio de ciclo 7 es completamente inaceptable!)
-  - Un caso especial de ciclo es la degeneración, en la que los mismos números aleatorios aparecen repetidamente.
+  - Un caso especial de ciclo es la **degeneración**, en la que los mismos números aleatorios aparecen repetidamente.
   - Como utilizamos un algoritmo para generar números aleatorios, los ciclos no se pueden evitar. Pero los ciclos largos (por ejemplo, algunos millones o algunos miles de millones) sirven al propósito de las simulaciones generales.
+
 - Los números aleatorios deben poder replicarse.
-- Y lo que es más importante, los números aleatorios generados deben aproximarse mucho a las propiedades estadísticas ideales de uniformidad e independencia.
+- Y lo que es más importante, los números aleatorios generados deben aproximarse mucho a las propiedades estadísticas ideales de **uniformidad** e **independencia**.
 
 ### Técnicas para generar números aleatorios
 
-#### Método de Generación Congruencial Lineal (GCL)
+#### Método del Generador lineal congruencial (GLC)
 
-El método congruencial lineal produce una secuencia de enteros $X_{1},X_{2},X_{3},...$ entre $0$ y $m-1$ de acuerdo a la siguiente relación de recurrencia:
+El generador lineal congruencial (GLC) produce una secuencia de enteros $X_{1},X_{2},X_{3},...$ entre $0$ y $m-1$ de acuerdo a la siguiente relación de recurrencia:
 
 $$X_{i+1}=\left(a X_i+c\right) \bmod m,\quad i=0,1,2, \ldots$$
 
@@ -75,7 +74,7 @@ $$X_{i+1}=\left(a X_i+c\right) \bmod m,\quad i=0,1,2, \ldots$$
 - $c$ es el incremento.
 - $m$ es el módulo.
 
-La selección de $a$,$c$,$m$ y $X_{0}$ afecta drásticamente las propiedades estadísticas como al media y la varianza, así como la longitud de ciclo.
+La selección de $a$ ,$c$, $m$ y $X_{0}$ afecta drásticamente las propiedades estadísticas como al media y la varianza, así como la longitud de ciclo.
 
 Cuando $c\neq0$, entonces se le llama *método congruencial mixto*, cuando $=0$, se conoce como *método congruencial multiplicativo*
 
