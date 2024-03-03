@@ -74,7 +74,7 @@ $$X_{i+1}=\left(a X_i+c\right) \bmod m,\quad i=0,1,2, \ldots$$
 - $c$ es el incremento.
 - $m$ es el módulo.
 
-La selección de $a$ ,$c$, $m$ y $X_{0}$ afecta drásticamente las propiedades estadísticas como al media y la varianza, así como la longitud de ciclo.
+La selección de $a$, $c$, $m$ y $X_{0}$ afecta drásticamente las propiedades estadísticas como al media y la varianza, así como la longitud de ciclo.
 
 Cuando $c\neq0$, entonces se le llama *método congruencial mixto*, cuando $=0$, se conoce como *método congruencial multiplicativo*
 
