@@ -158,8 +158,8 @@ x & 0 \leq x \leq 1 \\
 \end{cases}$$
 
 $$f(x)=\begin{cases}
-x & 0 \leq x \leq 1 \\
-2-x & 1<x \leq 2 \\ 
+1 & 0 \\
+1 & 2 \\ 
 0 & 1
 \end{cases}$$
 
