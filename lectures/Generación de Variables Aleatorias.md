@@ -19,7 +19,7 @@ x, & 0 \leq x \leq 1  \\
 1, & x > 0 
 \end{cases}$$
 
-### Técnica de la transformación inversa
+## Técnica de la transformación inversa
 
 - La técnica de la transformación inversa puede utilizarse para tomar muestras de las distribuciones exponenciales, uniformes, Weibulll y triangulares.
 - El principio básico es encontrar la función inversa de $F$, $F^{-1}$ tal que $FF^{-1}=F^{-1}F=1$
@@ -97,7 +97,6 @@ Si $X$ es una variable aleatoria uniformemente distribuida entre el intervalo $[
 
 La función de densidad de probabilidad de X esta dada por:
 
-
 $$f_(x)=\begin{cases}
 \frac{1}{b-a} & a \leq x \leq b \\
 0 & \text { de lo contrario }
@@ -111,7 +110,6 @@ $$F(x)=\begin{cases}
 1 & x>b
 \end{cases}$$ 
 
-
 **Paso 2**: Definimos $F(X)=(X-a)/(b-a)=R$
 
 **Paso 3**: Resolvemos $X$ en términos de $R$ obtenemos
@@ -124,23 +122,24 @@ $$X=a+(b-a)R$$
 
 La función de densidad de probabilidad es:
 
-$$f(x)= \begin{cases}\frac{\beta}{\alpha^\beta} x^{\beta-1} e^{-(x / \alpha)^\beta}, & x \geq 0 \\ 0, & \text { otherwise }\end{cases}$$
+$$f(x)= \begin{cases}
+\frac{\beta}{\alpha^\beta} x^{\beta-1} e^{-(x / \alpha)^\beta}, & x \geq 0 \\ 
+0, & \text { otherwise }
+\end{cases}$$
 
 **Paso 1** 
 
 Obtenemos la función de probabilidad acumulada:
 
-$$F(x)=1-e^{-(x / \alpha)^\beta}$$
-
-para $x \geqslant 0$
+$$F(x)=1-e^{-(x / \alpha)^\beta}, x \geqslant 0$$
 
 **Paso 2**
 
-Sea $F(x)=1-e^{-(x / \alpha)^\beta} = R$
+Definimos $F(x)=1-e^{-(x / \alpha)^\beta} = R$
 
 **Paso 3**
 
-Resolvemos para $X$ en terminos de $R$, obtenemos:
+Resolvemos para $X$ en términos de $R$, obtenemos:
 
 $$X=\alpha[-\ln (1-R)]^{1 / \beta}$$
 

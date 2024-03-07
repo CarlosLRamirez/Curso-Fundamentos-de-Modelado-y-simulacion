@@ -106,9 +106,9 @@ $$R_{3}=\frac{52}{100}=0.52$$
 - La *densidad máxima* es una medida de que tan "densamente" los valores asumidos por $R{i},i=1,2...$ llenan los espacios entre $[0,1]$. El *período máximo* es la longitud de la secuencia antes de que los números comiencen a repetirse.
 
 - Para lograr una *densidad máxima* para un rango determinado, una elección apropiada de $a$, $c$, $m$ y $X_{0}$ es muy importante. El *período máximo* puede ser alcanzado mediante algunas **selecciones comprobadas** de estos valores:
-  - Cuando $m$ es una potencia de 2, (i.e. $m=2^{b}$), y $c\neq0$, el período máximo es $P=m=2^{b}$, y se alcanza cuando $c$ es un primo relativo a $m$ y $a=1+4k$, donde $k$ es un entero (i.e. 5,9,13...). 
-  - Cuando $m$ es una potencia de 2, (i.e. $m=2^{b}$), y $c=0$, el período máximo posible es $P=m/4=2^{b-2}$, el cual es alcanzado si la semilla $X_{0}$ es impar y si el multiplicador $a$ esta dado por $a=3+8k$ o $a=5+8k$, donde $k$ es un entero (i.e. 11,21, 29).
-  - Si $m$ es un número primo y $c=0$, el mayor periodo posible es $P=m-1$ cuando $a$ satisface la propiedad que el menor valor de $k$ tal que $a^{k}-1$ es divisible por $m$ es $k=m-1$. Esto significa que $a$ debe ser una [raíz primitiva](https://es.wikipedia.org/wiki/Ra%C3%ADz_primitiva_m%C3%B3dulo_n) módulo $m$, lo cual es una condición para alcanzar el período máximo cuando m ex primo y c=0;
+  - Cuando $m$ es una potencia de 2, (i.e. $m=2^{b}$), y $c\neq0$, el período máximo es $P=m=2^{b}$, y se alcanza cuando $c$ es un primo relativo a $m$ y $a=1+4k$, donde $k$ es un entero (i.e. $a=5, 9, 13, ...$). 
+  - Cuando $m$ es una potencia de 2, (i.e. $m=2^{b}$), y $c=0$, el período máximo posible es $P=m/4=2^{b-2}$, el cual es alcanzado si la semilla $X_{0}$ es impar y si el multiplicador $a$ esta dado por $a=3+8k$ o $a=5+8k$, donde $k$ es un entero (i.e. $a=11, 21, 29,...$).
+  - Si $m$ es un número primo y $c=0$, el mayor periodo posible es $P=m-1$ cuando $a$ satisface la propiedad que el menor valor de $k$ tal que $a^{k}-1$ es divisible por $m$ es $k=m-1$. Esto significa que $a$ debe ser una [raíz primitiva](https://es.wikipedia.org/wiki/Ra%C3%ADz_primitiva_m%C3%B3dulo_n) módulo $m$, lo cual es una condición para alcanzar el período máximo cuando $m$ es primo y $c=0$.
 
 
 #### Ejercicio 1
@@ -116,12 +116,12 @@ $$R_{3}=\frac{52}{100}=0.52$$
 - A partir del ejemplo anterior ($X_{0}=27$ , $a=17$ , $c=43$ y $m=100$), genere 100 números pseudo-aleatorios mediante el método congruencial lineal. Puede utilizar una hoja de calculo o cualquier lenguaje de computadora.
 
 - ¿Cuál es el período de dicha secuencia de números pseudo-aleatorios? ¿Cual es la media y la varianza? ¿que pasa si genera 1000? ¿Qué pasa si cambia el valor semilla? Comente sus respuestas.
-- Genere gráficos de tipo histograma y de dispersion (scatter-plot) con los valores obtenidos.
-- Comente sus observaciones con respecto a las propiedades de Uniformidad y Densidad de la secuencia de números generados. ¿Cree que es adecuado para aplicarlo a un modelo se simulación?
+- Genere gráficos de tipo histograma y de dispersion (*scatter-plot*) con los valores obtenidos.
+- Comente sus observaciones con respecto a las propiedades de **Uniformidad** y **Densidad** de la secuencia de números generados. ¿Cree que es adecuado para aplicarlo a un modelo se simulación?
 
 #### Ejercicio 2
 
-- Repita el ejercicio anterior para el generador congruencial multiplicativo con $a=13$, $m=2^6=64$ y $X_0=1,2,3 y 4$, respondiendo a las mismas preguntas.
+- Repita el ejercicio anterior para el generador congruencial multiplicativo con $a=13$, $m=2^6=64$ y $X_0=1,2,3$ y $4$, respondiendo a las mismas preguntas.
 - Investigue valores comúnmente utilizados para generadores congruencial lineales, repita el ejercicio para estos valores investigado, respondiendo a las mismas preguntas.
 
 #### Ejercicio 3
@@ -135,5 +135,7 @@ $$d_i=16807d_{i-1}mod(2^{31} - 1)$$
 
 ## Generadores congruentes lineales combinados
 
-Combinando dos o más generadores congruentes multiplicativos se puede aumentar la longitud del período y se obtienen otras estadísticas mejores. Véase el Ejemplo en Banks,J., Carson,J., Nelson,B.& Nicol,D. (2020). Discrete-Event System Simulation (5ta ed.). Pearson. p. 282.
+Combinando dos o más generadores congruentes multiplicativos se puede aumentar la longitud del período y se obtienen otras estadísticas mejores. 
+
+Véase el Ejemplo en *Banks,J., Carson,J., Nelson,B.& Nicol,D. (2020). Discrete-Event System Simulation (5ta ed.). Pearson. p. 282.*
 
