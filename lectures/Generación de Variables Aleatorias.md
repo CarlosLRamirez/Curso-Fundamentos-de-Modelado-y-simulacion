@@ -160,7 +160,7 @@ x & 0 \leq x \leq 1 \\
 $$f(x)=\begin{cases}
 x & 0 < x < 1\\
 2-x & 1 < x < 2 \\ 
-0 & text{de lo contrario}
+0 & \text{de lo contrario}
 \end{cases}$$
 
 
