@@ -158,7 +158,7 @@ x & 0 \leq x \leq 1 \\
 \end{cases}$$
 
 $$f(x)=\begin{cases}
-x & 0 \\
+x & 0 < x \\
 2-x & 2 \\ 
 0 & 1
 \end{cases}$$
