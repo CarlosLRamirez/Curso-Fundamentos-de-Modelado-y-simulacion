@@ -182,7 +182,10 @@ $$R=1-\frac{(2-X)^{2}}{2}$$
 
 Resolver $X$ en términos de $R$
 
-$$X= \begin{cases} \sqrt{2R} & 0 < R \leq \frac{1}{2} \\ 2 - \sqrt{2(1-R)} & \frac{1}{2} < R \leq 1 \end{cases}$$
+$$X= \begin{cases}
+\sqrt{2R} & 0 < R \leq \frac{1}{2}
+\\ 2 - \sqrt{2(1-R)} & \frac{1}{2} < R \leq 1
+\end{cases}$$
 
 **Paso 4**
 
