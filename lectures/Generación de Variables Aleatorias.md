@@ -32,7 +32,7 @@ Recordemos la distribución exponencial
 
 - Función de densidad de probabilidad:
 
-$$f_(x)=\begin{cases}
+$$f(x)=\begin{cases}
 \lambda e^{-\lambda x}, & x \geq 0  \\
 0, & x < 0  \\ 
 \end{cases}$$
@@ -153,8 +153,14 @@ Función de densidad de probabilidad
 
 $$f(x)= \begin{cases}
 x & 0 \leq x \leq 1 \\
-2-x & 1<x \leq 2 \\ 0 & \text { otherwise }
+2-x & 1<x \leq 2 \\ 0 & \text { de lo contrario }
 \end{cases}$$
+
+$$f(x)=\begin{cases}
+\lambda e^{-\lambda x}, & x \geq 0  \\
+0, & x < 0  \\ 
+\end{cases}$$
+
 
 **Paso 1**
 
