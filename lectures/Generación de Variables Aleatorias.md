@@ -170,7 +170,7 @@ $$F(x)= \begin{cases}
 
 **Paso 2**
 
-sea $R=\frac{X^2}{2}$ para $0<X \leq 1$ y $R=1-\frac{(2-X)^{2}}{2}$ para $1< x\leq 2$
+Defina $R=\frac{X^2}{2}$ para $0 < X \leq 1$ y $R=1-\frac{(2-X)^{2}}{2}$ para $1< x \leq 2$.
 
 **Paso 3**
 
