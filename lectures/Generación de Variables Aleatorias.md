@@ -157,11 +157,11 @@ x & 0 \leq x \leq 1 \\
 0 & \text { de lo contrario }
 \end{cases}$$
 
-$$F(x)=\begin{cases}
-0 & x < a \\
-\frac{x-a}{b-a} & a \leq x \leq b \\
-1 & x>b
-\end{cases}$$ 
+$$f(x)=\begin{cases}
+x & 0 \leq x \leq 1 \\
+2-x & 1<x \leq 2 \\ 
+0 & 1
+\end{cases}$$
 
 
 **Paso 1**
