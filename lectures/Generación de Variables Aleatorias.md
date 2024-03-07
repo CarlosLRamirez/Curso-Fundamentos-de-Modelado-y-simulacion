@@ -163,9 +163,9 @@ Función de probabilidad acumulada
 
 $$F(x)= \begin{cases}
 0 & x \leq 0 \\
-\frac{x^2}{2} & 0<x \leq 1 \\
-1-\frac{(2-x)^2}{2} & 1<x \leq 2 \\
-1 & x>2
+\frac{x^2}{2} & 0 < x \leq 1 \\
+1 - \frac{(2-x)^2}{2} & 1 < x \leq 2 \\
+1 & x > 2
 \end{cases}$$
 
 **Paso 2**
