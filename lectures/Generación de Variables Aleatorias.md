@@ -151,7 +151,10 @@ Generar valores de $R_i$ uniformemente distribuidos entre $(0,1)$, para calcular
 
 Función de densidad de probabilidad
 
-$$f(x)= \begin{cases}x & 0 \leq x \leq 1 \\ 2-x & 1<x \leq 2 \\ 0 & \text { otherwise }\end{cases}$$
+$$f(x)= \begin{cases}
+x & 0 \leq x \leq 1 \\
+2-x & 1<x \leq 2 \\ 0 & \text { otherwise }
+\end{cases}$$
 
 **Paso 1**
 
