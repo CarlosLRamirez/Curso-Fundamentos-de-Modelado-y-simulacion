@@ -152,23 +152,21 @@ Generar valores de $R_i$ uniformemente distribuidos entre $(0,1)$, para calcular
 Función de densidad de probabilidad
 
 $$f(x)=\begin{cases}
-x & 0 \leq x \leq 1 \\
-2-x & 1<x \leq 2 \\ 
-0 & \text { de lo contrario }
-\end{cases}$$
-
-$$f(x)=\begin{cases}
 x & 0 \leq x \leq 1\\
 2-x & 1 < x \leq 2 \\ 
 0 & \text{de lo contrario}
 \end{cases}$$
 
-
 **Paso 1**
 
 Función de probabilidad acumulada
 
-$$F(x)= \begin{cases}0 & x \leq 0 \\ \frac{x^2}{2} & 0<x \leq 1 \\ 1-\frac{(2-x)^2}{2} & 1<x \leq 2 \\ 1 & x>2\end{cases}$$
+$$F(x)= \begin{cases}
+0 & x \leq 0 \\
+\frac{x^2}{2} & 0<x \leq 1 \\
+1-\frac{(2-x)^2}{2} & 1<x \leq 2 \\
+1 & x>2
+\end{cases}$$
 
 **Paso 2**
 
