@@ -208,4 +208,14 @@ Generar valores de $R_i$ uniformemente distribuidos entre $(0,1)$, para calcular
 - A partir de dicha secuencia, genere variables aleatorias con una distribución uniforme entre 0 y 5.
 - Genere gráficos tipo histograma tanto de la secuencia de número aleatorios como de la variable aleatoria calculada.
 - Calcule la media y desviación estándar de los valores calculados para la variable aleatoria.
-- Compare los histogramas empíricos y los valores estadísticos con los valores teóricos para una distribución exponencial.
+- Compare los histogramas empíricos y los valores estadísticos con los valores teóricos para una distribución uniforme.
+
+### Ejercicio 3
+
+- Repetir el ejercicio para la distribución de Weibull
+- Elija los valores de alfa y beta
+  
+### Ejercicio 4
+
+- Repetir el ejercicio para la distribución Triangular
+
