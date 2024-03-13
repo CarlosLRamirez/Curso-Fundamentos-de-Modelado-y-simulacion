@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+../src/ejercicio4_gna -n .:../src $*
+# for shared lib, use: opp_run -l ../src/ejercicio4_gna -n .:../src $*
