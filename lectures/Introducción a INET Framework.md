@@ -7,57 +7,90 @@ https://inet.omnetpp.org/docs/users-guide/ch-usage.html#installation
 
 
 
-## Laboratorio No. 1: Ping
+## Laboratorio No. 1: Ping en OMNeT++ con INET Framework
 
-- Crear un projecto vacio de Omnet++ nombrarlo `lab1Ping`
-- Hacer click derecho en el projecto vacio, e ir a *Properties*
+### Objetivo:
+Configurar y ejecutar una simulación básica de ping entre dos hosts utilizando el framework INET en OMNeT++.
 
-![](../images/2024-03-12-22-46-11.png)
+### Instrucciones:
 
-- En la sección de Project References, marcar inet4.5, y Apply & Close.
-  
-![](../images/2024-03-12-22-47-24.png)
+1. **Creación del Proyecto**:
+   - Inicia OMNeT++ y crea un nuevo proyecto vacío nombrándolo `lab1Ping`.
 
-- 
+2. **Configuración del Proyecto**:
+   - Haz clic derecho sobre el proyecto `lab1Ping` en el explorador de proyectos y selecciona *Properties*.
 
-- Crear un archivo NED vacio, nombrarlo lab1.ned
-- En la pestaña Design del archivo NED, agregar un elemento Network
+    [](../images/2024-03-12-22-46-11.png)
 
+   - En la sección *Project References*, marca la casilla correspondiente a `inet4.5`. Luego, selecciona *Apply and Close* para cerrar la ventana.
 
-**package.ned**
-```
-package simpleeth.simulations;
+    ![](../images/2024-03-12-22-47-24.png)
 
-@license(LGPL);
+3. **Creación de Archivo NED**:
+   - Crea un nuevo archivo NED dentro del proyecto y nómbralo `lab1.ned`.
 
+4. **Diseño de la Red**:
+   - Abre la pestaña *Design* en el editor del archivo NED `lab1.ned`.
+   - Agrega un elemento `Network` al lienzo.
+
+    ![](../images/2024-03-12-22-59-46.png)
+
+5. **Adición de Hosts**:
+   - Añade dos hosts al diseño de la red, utilizando el módulo `StandardHost`.
+
+    ![](../images/2024-03-12-23-05-44.png)
+
+6. **Configurador de Red**:
+   - Inserta un elemento `ipv4NetworkConfigurator` en la red.
+    
+    ![](../images/2024-03-12-23-08-43.png)
+
+   - Renombra este módulo a `configurator` para simplificar su identificación.
+
+    ![](../images/2024-03-12-23-11-42.png)
+
+7. **Conexión de Hosts**:
+   - Utilizando la herramienta `Connection`, selecciona `Eth100M` para conectar los hosts mediante la interfaz `ethg[0]`.
+
+    ![](../images/2024-03-12-23-17-47.png)
+
+    ![](../images/2024-03-12-23-18-41.png)
+
+8. **Resultado Final en `lab1.ned`**:
+   - Tu archivo `lab1.ned` debería tener el siguiente aspecto después de seguir los pasos anteriores:
+   - En la pestaña de *Source* del editor del archivo NED, modifica la sección de `connections` para que en lugar de asignar el número de interfaz `ethg[0]`, este sea asignado dinámicamente con `ethg++`.
+
+```ned
 import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
+import inet.node.ethernet.Eth100M;
 import inet.node.inet.StandardHost;
+import inet.showcases.measurement.flow.MyStandardHost;
+import ned.IdealChannel;
 
-channel Ethernet100 extends ned.DatarateChannel
-{
- datarate = 100Mbps;
- delay = 100us;
- ber = 1e-10;
-}
-
+//
+// TODO documentation
+//
 network Network
 {
-    @display("bgb=385,198");
+    @display("bgb=366,217");
     submodules:
         standardHost: StandardHost {
-            @display("p=62,80");
+            @display("p=59,70");
         }
         standardHost1: StandardHost {
-            @display("p=295,80");
+            @display("p=299,105");
         }
         configurator: Ipv4NetworkConfigurator {
-            @display("p=183,160");
+            @display("p=305,31");
         }
     connections:
-        standardHost.ethg++ <--> Ethernet100 <--> standardHost1.ethg++;
+        standardHost.ethg++ <--> Eth100M <--> standardHost1.ethg++;
 }
-
 ```
+
+1. Crea el archivo `omnetpp.ini` y copia el codigo para que quede asi:
+
+
 
 
 **omnetpp.ini**
