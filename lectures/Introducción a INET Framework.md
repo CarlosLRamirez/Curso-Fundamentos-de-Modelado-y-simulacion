@@ -117,7 +117,7 @@ network = Network
 https://doc.omnetpp.org/inet/api-current/neddoc/inet.node.inet.StandardHost.html
 https://doc.omnetpp.org/inet/api-current/neddoc/ned.DatarateChannel.html
 
-![picture 2](../images/caed41465b9d435c38af50bd966d0055c197404d2664e5b3f6668b83dbbdb7ba.png =100x)  
+![picture 2](../images/caed41465b9d435c38af50bd966d0055c197404d2664e5b3f6668b83dbbdb7ba.png =10x)  
 
 
 ## Ejemplo: Ethernet Switch / TCP Application
