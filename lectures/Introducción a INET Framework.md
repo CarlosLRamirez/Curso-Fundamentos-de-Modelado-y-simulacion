@@ -5,9 +5,24 @@
 https://inet.omnetpp.org/docs/users-guide/index.html
 https://inet.omnetpp.org/docs/users-guide/ch-usage.html#installation
 
-## Ejemplo Ping 
 
-![alt text](basicPing.png)
+
+## Laboratorio No. 1: Ping
+
+- Crear un projecto vacio de Omnet++ nombrarlo `lab1Ping`
+- Hacer click derecho en el projecto vacio, e ir a *Properties*
+
+![](../images/2024-03-12-22-46-11.png)
+
+- En la sección de Project References, marcar inet4.5, y Apply & Close.
+  
+![](../images/2024-03-12-22-47-24.png)
+
+- 
+
+- Crear un archivo NED vacio, nombrarlo lab1.ned
+- En la pestaña Design del archivo NED, agregar un elemento Network
+
 
 **package.ned**
 ```
@@ -133,3 +148,5 @@ network = Network
 *.standardHost4.app[0].localAddress = "standardHost4"
 *.standardHost4.app[0].localPort = 10021
 ```
+
+## Ejemplo: Ethernet Switch / UDP Application
