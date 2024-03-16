@@ -302,17 +302,17 @@ Ejemplo de configuración:
 
 FTP:
 ```
-numRequestsPerSession = exponential(3)
-requestLength = truncnormal(20,5)
-replyLength = exponential(1000000)
+numRequestsPerSession = int(exponential(3))
+requestLength = 1B*int(truncnormal(20,5))
+replyLength = 1B*int(exponential(1000000))
 ```
 
 HTTP:
 ```
-numRequestsPerSession = 1 # HTTP 1.0
-numRequestsPerSession = exponential(5)  # HTTP 1.1, with keepalive
-requestLength = truncnormal(350,20)
-replyLength = exponential(2000)
+numRequestsPerSession = 1 #(HTTP 1.0)
+numRequestsPerSession = int(exponential(5)) #(HTTP 1.1, with keepalive)
+requestLength = 1B*int(truncnormal(350,20))
+replyLength = 1B*int(exponential(2000))
 ```
 
 Tenga en cuenta que, dado que la mayoría de las páginas web contienen imágenes y pueden contener marcos, applets, etc., posiblemente de varios servidores, y los navegadores suelen descargar estos elementos en paralelo al documento HTML principal, este módulo no puede servir como un cliente web realista.
@@ -338,7 +338,14 @@ El módulo acepta cualquier número de conexiones TCP entrantes, y espera recibi
 - Aumente el valor del `requestLength` a 1024 bytes. Con esta nueva configuración ¿Cuantos segmentos TCP se envián entre el cliente y el servidor en cada sesion? explique su respuesta
 - Agrege un cliente y modele la generación de trafico FTP hacia el servidor.
 - Agrege un cliente y modele la generación de trafico HTTP 1.1 hacia el servidor.
-  
+- Cual es el troughtput del trafico recibido por el cliente para cada aplicación. Sugerencia, utilize la estadistica packetReceived?
+
+## Laboratorio 3 
+
+### Instrucciones
+- Utilizando de referencia los laboratorios anteriores, y la [documentación del INET Framework](https://inet.omnetpp.org/docs/users-guide/ch-networks.html), genere una simulación de tráfico UDP entre el cliente y el servidor.
+- Utilice la aplicacion `UdpBasicApp` en el cliente y `UdpEchoApp` en el servidor.
+
 ## Referencias
 
 - [Guia de Usuario de INET - Networks](https://inet.omnetpp.org/docs/users-guide/ch-networks.html)
