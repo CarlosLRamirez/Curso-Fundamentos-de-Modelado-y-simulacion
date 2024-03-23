@@ -16,9 +16,9 @@ Considere un sistema de colas de un servidor único (ver Figura 1.4) para el cua
 - Queremos simular este sistema hasta que un número fijo $(n)$ de clientes haya completado su tiempo de espera en la cola; i.e. la simulación se detendrá cuando el $nvo$ cliente haya entrado en servicio.
 - Note que el *tiempo* en que finaliza la simulación es tambien una variable aleatoria, dependiente de los valores obtenidos de las variables aleatorias de tiempo entre llegadas y tiempo de servicio.
 - Para medir el rendimiento de este sistema, nos fijaremos en las *estimaciones* de tres cantidades:
-	- El tiempo medio *esperado* de espera en la cola, $d(n)$ (`queueingTime:vector(vector)`)
-	- El número de clientes *esperado* que esperan en la cola. $q(n)$ (`qlen:vector(vector)`)
-	- Utilización esperada del servidor $u(n)$ (`busy:timeavg(scalar)`)
+	- El tiempo medio *esperado* de espera en la cola, $d(n)$ 
+	- El número de clientes *esperado* que esperan en la cola. $q(n)$
+	- Utilización esperada del servidor $u(n)$
 
 ![picture 1](../images/6694940f831eed11143a4a7b13d10745efbde839c5b46d42ef917087d605b47c.png)  
 
@@ -37,7 +37,7 @@ El OMNeT++ podemos utilizar el siguiente [ejemplo](../omnet-projects/fifo) para 
 
 Las estadisticas que nos interesan son las siguientes:
 
-- El tiempo medio *esperado* de espera en la cola, $d(n)$ (`queueingTime:vector(vector`)
-- El número de clientes *esperado* que esperan en la cola. $q(n)$ (`qlen:vector(vector)`)
-- Utilización esperada del servidor $u(n)$ (`busy:timeavg(scalar)`)
+- El tiempo medio *esperado* de espera en la cola, $d(n)$:`queueingTime:vector(vector`
+- El número de clientes *esperado* que esperan en la cola, $q(n)$: `qlen:vector(vector)`
+- Utilización esperada del servidor $u(n)$:`busy:timeavg(scalar)`
 	
