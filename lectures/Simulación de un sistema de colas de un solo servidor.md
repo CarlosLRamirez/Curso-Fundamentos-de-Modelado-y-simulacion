@@ -16,7 +16,7 @@ Considere un sistema de colas de un servidor único (ver Figura 1.4) para el cua
 - Queremos simular este sistema hasta que un número fijo $(n)$ de clientes haya completado su tiempo de espera en la cola; i.e. la simulación se detendrá cuando el $nvo$ cliente haya entrado en servicio.
 - Note que el *tiempo* en que finaliza la simulación es tambien una variable aleatoria, dependiente de los valores obtenidos de las variables aleatorias de tiempo entre llegadas y tiempo de servicio.
 - Para medir el rendimiento de este sistema, nos fijaremos en las *estimaciones* de tres cantidades:
-	- El tiempo medio *esperado* de espera en la cola, $d(n)$ (`queueingTime:vector(vector))
+	- El tiempo medio *esperado* de espera en la cola, $d(n)$ (`queueingTime:vector(vector)`)
 	- El número de clientes *esperado* que esperan en la cola. $q(n)$ (`qlen:vector(vector)`)
 	- Utilización esperada del servidor $u(n)$ (`busy:timeavg(scalar)`)
 
