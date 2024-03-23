@@ -20,13 +20,24 @@ Considere un sistema de colas de un servidor único (ver Figura 1.4) para el cua
 	- El número de clientes *esperado* que esperan en la cola. $q(n)$ (`qlen:vector(vector)`)
 	- Utilización esperada del servidor $u(n)$ (`busy:timeavg(scalar)`)
 
+![picture 1](../images/6694940f831eed11143a4a7b13d10745efbde839c5b46d42ef917087d605b47c.png)  
+
+![picture 2](../images/fcb066e94cd26e6a190ad11382ebbcf64754a46271239dcfa0ee90653223f76c.png)  
+
+
+### Referencias
+
+Simulation Modeling and Analysis, FIFTH EDITION, Averill M. Law.
+Sección 1.4, Página 12
+
+
 # Simulación en OMNeT++
 
 El OMNeT++ podemos utilizar el siguiente [ejemplo](../omnet-projects/fifo) para modelar un sistema de cola con un solo servidor.
 
 Las estadisticas que nos interesan son las siguientes:
 
-- El tiempo medio *esperado* de espera en la cola, $d(n)$ (`queueingTime:vector(vector))
+- El tiempo medio *esperado* de espera en la cola, $d(n)$ (`queueingTime:vector(vector`)
 - El número de clientes *esperado* que esperan en la cola. $q(n)$ (`qlen:vector(vector)`)
 - Utilización esperada del servidor $u(n)$ (`busy:timeavg(scalar)`)
 	
